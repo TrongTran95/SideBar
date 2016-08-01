@@ -116,7 +116,7 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         isSideBarOpen = shouldOpen
         
         let gravityX:CGFloat = shouldOpen ? 0.5 : -0.5
-        let magnitude:CGFloat = shouldOpen ? 20 : -20
+        let magnitude:CGFloat = shouldOpen ? 20 : -21
         let boundaryX:CGFloat = shouldOpen ? barWidth : -barWidth - 1
         
         let gravityBehavior:UIGravityBehavior = UIGravityBehavior(items: [sideBarContainerView])
@@ -134,6 +134,16 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         let sideBarBehavior:UIDynamicItemBehavior = UIDynamicItemBehavior(items: [sideBarContainerView])
         sideBarBehavior.elasticity = 0.3
         animator.addBehavior(sideBarBehavior)
+    }
+    
+    ///Set username text
+    func setUsername(str: String){
+        lblName.text = str
+    }
+    
+    ///Set user's profile image
+    func setProfileImage(img:UIImage){
+        avatar.image = img
     }
     
     func sideBarControlDidSelectRow(indexPath: NSIndexPath) {

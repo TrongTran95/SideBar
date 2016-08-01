@@ -10,6 +10,7 @@ import UIKit
 
 var sideBarImage:UIImage = UIImage(named: "SideBar_icon")!
 var backImage:UIImage = UIImage(named: "Back_icon")!
+var avatarImage:UIImage = UIImage(named: "Avatar")!
 
 class HomeViewController: UIViewController, SideBarDelegate {
     
@@ -32,13 +33,18 @@ class HomeViewController: UIViewController, SideBarDelegate {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btnSideBar)
         
         //Setup SideBar
-        //Label
+        //Label's SideBar item
         menuItems = [["A", "B", "C", "D"],["E", "F", "G", "H"]]
-        //Image
+        //Image's SideBar item
         menuImageItems = [[sideBarImage, sideBarImage, sideBarImage, sideBarImage],[sideBarImage, sideBarImage, sideBarImage, sideBarImage]]
         
         sideBar = SideBar(sourceView: self.view, menuItems: menuItems, menuImageItems: menuImageItems, barButtonImage: imgvSideBar)
         sideBar.delegate = self
+        
+        //Set username
+        sideBar.setUsername("Admin")
+        //Set user's profile image
+        sideBar.setProfileImage(avatarImage)
     }
     
     ///Customize bar button on navigation bar
