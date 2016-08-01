@@ -1,7 +1,7 @@
 # SideBar
 Custom side bar (navigation drawer) in Swift 2.
 
-[alt tag](https://raw.github.com/TrongTran95/SideBar/master/path/to/SideBar.gif)
+![sidebar](https://cloud.githubusercontent.com/assets/20257815/17294125/f48ab2d8-581e-11e6-9338-11384410e44e.gif)
 
 ## In HomeViewController.swift ##
 -Use **sideBarDidSelectButtonAtIndex** funtion to create handler for every clicked on SideBar item
